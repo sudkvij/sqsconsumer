@@ -1,4 +1,9 @@
 FROM amazoncorretto:17
 WORKDIR /app
+
+ENV AWS_ACCESS_KEY_ID=1234
+ENV AWS_SECRET_ACCESS_KEY=1234
+ENV AWS_SESSION_TOKEN=1234
+
 COPY target/SQSConsumer-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
